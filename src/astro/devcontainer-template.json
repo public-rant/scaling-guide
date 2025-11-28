@@ -1,0 +1,5 @@
+{
+  "id": "astro",
+  "name": "Astro Agent Scaffold",
+  "description": "A pre-configured Astro project with a self-iterating Gemini agent."
+}

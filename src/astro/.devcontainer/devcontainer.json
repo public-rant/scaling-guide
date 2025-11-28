@@ -1,0 +1,17 @@
+{
+  "name": "Astro Agent",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
+  "features": {
+    "ghcr.io/public-rant/feature-starter/research-agent:1": {}
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+  "workspaceFolder": "/workspace",
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["astro-build.astro-vscode", "github.copilot"]
+    }
+  },
+
+  "postCreateCommand": "npm install && mkdir -p .codesandbox && echo '{\"setup\": {\"name\": \"Install\", \"command\": \"npm install\", \"runAtStart\": true}, \"dev\": {\"name\": \"Start Astro\", \"command\": \"npm run dev\", \"runAtStart\": true, \"preview\": {\"port\": 4321}}, \"agent\": {\"name\": \"Agent Loop\", \"command\": \"gemini /iterate\", \"runAtStart\": true, \"preview\": {\"port\": 3000}}}' > .codesandbox/tasks.json"
+}

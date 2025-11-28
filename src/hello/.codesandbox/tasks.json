@@ -1,0 +1,7 @@
+{
+  "agent": {
+    "name": "Agent Loop",
+    "command": "gemini /iterate",
+    "runAtStart": false
+  }
+}

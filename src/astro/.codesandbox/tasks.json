@@ -1,0 +1,18 @@
+{
+  "setup": {
+    "name": "Install Dependencies",
+    "command": "npm install",
+    "runAtStart": false
+  },
+  "dev": {
+    "name": "Start Astro",
+    "command": "npm run dev",
+    "runAtStart": true,
+    "preview": { "port": 4321 }
+  },
+  "agent": {
+    "name": "Agent Loop",
+    "command": "gemini /iterate",
+    "runAtStart": false
+  }
+}

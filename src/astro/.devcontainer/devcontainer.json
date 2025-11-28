@@ -10,5 +10,4 @@
       "extensions": ["astro-build.astro-vscode", "github.copilot"]
     }
   },
-  "postCreateCommand": "npm install -g @google/gemini-cli && npm install"
 }

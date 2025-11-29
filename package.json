@@ -7,7 +7,6 @@
     "test": "test"
   },
   "scripts": {
-    "test": "npm run test:hello && npm run test:color",
     "test:hello": "./.github/actions/smoke-test/build.sh hello && ./.github/actions/smoke-test/test.sh hello",
     "test:color": "./.github/actions/smoke-test/build.sh color && ./.github/actions/smoke-test/test.sh color"
   },

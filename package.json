@@ -1,0 +1,28 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "> This repo provides a starting point and example for creating your own custom [Dev Container Templates](https://containers.dev/implementors/templates), hosted for free on GitHub Container Registry.  The example in this repository follows the [Dev Container Template distribution specification](https://containers.dev/implementors/templates-distribution/).   > > To provide feedback on the distribution spec, please leave a comment [on spec issue #71](https://github.com/devcontainers/spec/issues/71).",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test:hello": "./.github/actions/smoke-test/build.sh hello && ./.github/actions/smoke-test/test.sh hello",
+    "test:color": "./.github/actions/smoke-test/build.sh color && ./.github/actions/smoke-test/test.sh color"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/public-rant/scaling-guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/public-rant/scaling-guide/issues"
+  },
+  "homepage": "https://github.com/public-rant/scaling-guide#readme",
+  "devDependencies": {
+    "@devcontainers/cli": "^0.80.2"
+  }
+}

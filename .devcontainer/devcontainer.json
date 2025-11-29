@@ -12,5 +12,5 @@
 			]
 		}
 	},
-	"postCreateCommand": "npm install -g @devcontainers/cli"
+	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y jq && npm install"
 }

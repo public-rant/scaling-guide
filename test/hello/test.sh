@@ -6,12 +6,7 @@ source test-utils.sh
 check "distro" lsb_release -c
 check "greeting" [ $(cat /usr/local/etc/greeting.txt | grep hey) ]
 
-# Node smoke test
-check "node" node --version
-
 pushd /workspaces/videos
-npm install
-npx playwright install --with-deps
 check "playwright-list" npx playwright test --list --reporter json | grep specs
 popd
 

@@ -11,7 +11,7 @@ git clone git@github.com:public-rant/videos playwright-examples
 pushd playwright-examples
 npm install
 npx playwright install --with-deps chromium
-check "playwright-list" npx playwright test --project chromium --list --reporter json | grep specs
+check "playwright-list" npx playwright test --list --reporter json | grep specs
 popd
 
 # Report result

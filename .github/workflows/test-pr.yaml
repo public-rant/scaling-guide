@@ -25,6 +25,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
       - name: Smoke test for '${{ matrix.templates }}'
         id: smoke_test
-        run: npm run test:${{ matrix.templates }}
+        uses: ./.github/actions/smoke-test
+        with:
+          template: "${{ matrix.templates }}"

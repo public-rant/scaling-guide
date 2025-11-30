@@ -7,7 +7,8 @@
     "test": "test"
   },
   "scripts": {
-"test:hello": "cd src/hello && devcontainer up --workspace-folder . && devcontainer exec --workspace-folder . bash -c 'git clone https://github.com/public-rant/videos.git /workspaces/videos && cd /workspaces/videos && npm install && npx playwright install --with-deps && npx playwright test --list --reporter json | grep specs'",
+    "test": "npm run test:hello && npm run test:color",
+    "test:hello": "./.github/actions/smoke-test/build.sh hello && ./.github/actions/smoke-test/test.sh hello",
     "test:color": "./.github/actions/smoke-test/build.sh color && ./.github/actions/smoke-test/test.sh color"
   },
   "repository": {

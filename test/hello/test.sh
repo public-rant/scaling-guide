@@ -1,5 +1,6 @@
 #!/bin/bash
 cd $(dirname "$0")
+set -e -o pipefail
 source test-utils.sh
 
 # Template specific tests

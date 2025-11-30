@@ -11,6 +11,10 @@ runs:
       id: checkout_release
       uses: actions/checkout@v3
 
+    - name: Install dependencies
+      shell: bash
+      run: npm ci
+
     - name: Build template
       id: build_template
       shell: bash

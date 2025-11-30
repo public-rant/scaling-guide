@@ -6,7 +6,7 @@ source test-utils.sh
 check "distro" lsb_release -c
 check "greeting" [ $(cat /usr/local/etc/greeting.txt | grep hey) ]
 
-git clone git@github.com:public-rant/scaling-guide playwright-examples
+git clone git@github.com:public-rant/videos playwright-examples
 pushd playwright-examples
 npm install
 npx playwright install --with-deps chromium
